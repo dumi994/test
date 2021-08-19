@@ -1,0 +1,139 @@
+/* COMMON */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .show > .nav-link {
+  color: rgba(231, 55, 55, 0.9);
+}
+
+/* COMMON */
+
+/* MAIN */
+
+.main-content {
+  background-image: url("https://www.comicsuniverse.it/wp-content/uploads/2016/04/4954522-dc_vs_marvel__war_of_the_universes_by_timothylaskey-d8dliff.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+.container .card:hover {
+  width: 255px;
+  /* height: 525px; */
+}
+
+.container .card {
+  background: rgba(0, 0, 0, 0.5);
+  width: 245px;
+  height: 525px;
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 20px 20px 30px rgba(11, 47, 250, 0.829);
+}
+
+.container .card:hover {
+  box-shadow: 10px 10px 10px #be0202;
+  /* a, h3{
+      font-weight: 400;
+      //font-size: 20px;
+      //color:rgb(207, 11, 11);
+  } */
+}
+
+.container .card h3 {
+  padding: 10px;
+}
+
+.container .card a {
+  color: white;
+  text-decoration: none;
+}
+
+.container .card img {
+  width: 100%;
+}
+
+.container .card .card-top {
+  height: 95%;
+}
+
+.container .card .card-bottom {
+  height: 5%;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+/* MAIN */
+
+/* SHOW */
+
+.container {
+  /* height: 900px; */
+}
+
+.container .show-card {
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  width: 351px;
+  margin: 30px auto;
+  box-shadow: 20px 20px 30px rgba(11, 47, 250, 0.829);
+  /*  */
+  background: rgba(0, 0, 0, 0.5);
+  /* background-color: lightgrey; */
+}
+
+.container .show-card span,
+.container .show-card a p {
+  color: black;
+}
+
+.container .show-card h3 {
+  color: #fb0404;
+  font-weight: 800;
+  font-size: 60px;
+}
+
+.container .show-card .card-bottom {
+  height: 100%;
+  margin: auto;
+  margin-bottom: 10px;
+  background-color: rgba(248, 248, 248, 0.7);
+}
+
+.container .show-card .card-bottom:hover {
+  background-color: #4adb1e;
+  /* span, p{
+      //font-size: 18px;
+      color:white;
+      //font-weight: 400;
+  } */
+}
+
+.container .show-card .card-bottom:hover span,
+.container .show-card .card-bottom:hover a p {
+  color: white;
+}
+
+.container .show-card .card-bottom a {
+  color: black;
+  text-decoration: none;
+}
+
+.container .show-card img {
+  width: 350px;
+  border-radius: 10px 10px 0 0;
+  border-right: 1px solid lightgrey;
+  border-bottom: 1px solid black;
+}
+
