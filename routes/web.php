@@ -13,29 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+Route::get('/', 'PageController@index')->name('home'); 
 
 /* Products */
-Route::get('/products', function () {
-    $comics = config('comics.data');
-    return view('products.index', compact('comics'));
-})->name('products');
-Route::get('/products/{id}', function($id){
-    $comics = config('comics.data');
+Route::get('/products', 'PageController@products')->name('products');
+Route::get('/products/{id}', 'PageController@show')->name('comic');
 
-    if(is_numeric($id) &&  $id < count($comics) && $id >= 0){
-        $comic = $comics[$id];
-        return view('products.show', compact('comic'));
-    }else{
-        abort(404);
-    }
-})->name('comic');
+
+// Movies
+//Route::get('/movies', 'MovieController@index')->name('movie');
+
+/* SHOW */
+Route::resource('movies', MovieController::class);
 /* PRODUCTS */
 
+/* INFO */
+Route::get('/info','PageController@info')->name('info');
 
-Route::get('/info', function () {
-    return view('info');
-})->name('info');
-
+/* INFO */

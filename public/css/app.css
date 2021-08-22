@@ -78,19 +78,14 @@ h1 {
 
 /* SHOW */
 
-.container {
-  /* height: 900px; */
-}
-
 .container .show-card {
+  word-break: break-word;
   border: 1px solid lightgrey;
   border-radius: 10px;
   width: 351px;
   margin: 30px auto;
   box-shadow: 20px 20px 30px rgba(11, 47, 250, 0.829);
-  /*  */
   background: rgba(0, 0, 0, 0.5);
-  /* background-color: lightgrey; */
 }
 
 .container .show-card span,

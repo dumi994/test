@@ -75,15 +75,7 @@
                 @foreach(config('comics.menu') as $item)
                   <li class="nav-item " ><a class="nav-link {{Route::currentRouteName() === $item['href'] ? 'active' : '' }}" href="{{ route($item['href']) }}"><h2>{{$item['text']}}</h2></a></li>
                 @endforeach
-                <!-- <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="{{route('products')}}">Products</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="{{route('info')}}">Info</a>
-                </li> -->
+               
             </ul>
             </div>
         </div>

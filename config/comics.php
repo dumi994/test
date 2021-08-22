@@ -217,17 +217,20 @@ return [
     ],
     'menu' => [
         [
-            'href' => ('home'),
-             'text' => ('Home') 
+            'href' => 'home',
+             'text' => 'Home' 
         ],
         [
-             'href' => ('products'),
-             'text' => ('Products') 
+             'href' => 'products',
+             'text' => 'Comics' 
         ],
         [
-             'href' => ('info'),
-             'text' => ('Info') 
+            'href' => 'movies.index',
+            'text' => 'Movies' 
         ],
-         
+        [
+             'href' => 'info',
+             'text' => 'Info' 
+        ],
     ]
 ];

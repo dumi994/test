@@ -1,12 +1,12 @@
 @extends('layout.app')
 
-@section('title', 'Products Page')
+@section('title', 'Comics Page')
 
 @section('content')
-    <h1>Products</h1>
+    <h1>Comics</h1>
     <div class="container d-flex flex-wrap">
     @foreach($comics as $index => $comic)
-        <div class="card ">
+    <div class="card ">
             <a href="{{route('comic', ['id' => $index])}}">
                 <div class="card-top text-center">
                     <img src="{{$comic['thumb']}}" alt="">
@@ -17,7 +17,8 @@
                     <p>Price: {{$comic['price']}}</p>
                 </div>
             </a>
-        </div>    
+            </div>    
         @endforeach
     </div>
+    
 @endsection
