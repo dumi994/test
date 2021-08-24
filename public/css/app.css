@@ -11,6 +11,24 @@
   color: rgba(231, 55, 55, 0.9);
 }
 
+.buttons {
+  width: 100px;
+  margin: 10px;
+}
+
+.create-div .button-create {
+  background-color: greenyellow;
+  width: 150px;
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  box-shadow: 10px 10px 10px blue;
+}
+
+.create-div .button-create:hover {
+  box-shadow: 10px 10px 10px red;
+}
+
 /* COMMON */
 
 /* MAIN */

@@ -17,11 +17,20 @@ class CreateProductsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('description');
-            $table->integer('price');
+            $table->string('price');
             $table->string('image');
             
             $table->timestamps();
         });
+        /* $validate = $request->validate([
+            'name' => 'required | min:5 | max:100',
+            'image' => 'nullable | image | max: 2500',
+            'description' => 'required',
+            'price' => 'required | min:5 | max:150',
+            'category_id' => 'nullable | exists:categories,id',
+            'tags' => 'nullable | exists:tags,id'
+        ]);
+        $movie= Product::create($validate); */
     }
 
     /**

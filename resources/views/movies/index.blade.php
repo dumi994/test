@@ -4,7 +4,11 @@
 
 @section('content')
 <h1>Movies</h1>
+    <div class="container d-flex create-div">
+        <a class="text-white" href="{{route('movies.create')}}"><button class="btn button-create">Create a new film</button></a>
+    </div>
     <div class="container text-white d-flex flex-wrap">
+        
         @foreach($movies as $index => $movie)
         <div class="card">
             <a href="{{ route('movies.show', ['movie' => $index]) }}"> <!-- TOGLIERE --  PER DECOMMENTARE     -->
@@ -17,7 +21,9 @@
                     <p>Price: {{$movie->price}}</p>
                 </div>
             </a>
-            </div>  
+            </div>              
+           
         @endforeach
     </div>
+    
 @endsection

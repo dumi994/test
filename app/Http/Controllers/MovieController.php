@@ -27,7 +27,7 @@ class MovieController extends Controller
      */
     public function create()
     {
-        //
+        return view('movies.create');
     }
 
     /**
@@ -38,7 +38,29 @@ class MovieController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //ddd($request->all());
+        
+       /*  $validate = $request->validate([
+            'name' => 'required | min:5 | max:100',
+            'image' => 'nullable | image | max: 2500',
+            'description' => 'required',
+            'price' => 'required | min:5 | max:150',
+            
+            
+        ]);
+        $request = Product::create($validate);
+        
+
+        return redirect()->route('movies.index'); */
+
+        $movie = new Product();
+        $movie->name = $request['name'];
+        $movie->description = $request['description'];
+        $movie->price = $request['price'];
+        $movie->image = $request['image'];
+        $movie->save();
+
+        return redirect()->route('movies.index');
     }
 
     /**
@@ -64,9 +86,11 @@ class MovieController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Product $movie)
     {
-        //
+        //ddd($movie);
+        
+        return view('movies.edit', compact('movie'));
     }
 
     /**
@@ -76,9 +100,22 @@ class MovieController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Product $movie)
     {
-        //
+        //dd($request->all());
+        //dd($movie);
+        /* $validate = $request->validate([
+            'name' => 'required | min:5 | max:100',
+            'image' => 'nullable | image | max: 2500',
+            'description' => 'required',
+            'price' => 'required | min:5 | max:150',
+            'category_id' => 'nullable | exists:categories,id',
+            'tags' => 'nullable | exists:tags,id'
+        ]);
+        $movie= Product::create($validate); */
+        $data = $request->all();
+        $movie->update($data);
+        return redirect()->route('movies.index');
     }
 
     /**
@@ -87,8 +124,9 @@ class MovieController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Product $movie)
     {
-        //
+        $movie->delete();
+        return redirect()->route('movies.index');
     }
 }
